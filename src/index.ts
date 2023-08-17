@@ -4,20 +4,20 @@ import { getMasterRegExp, insertComments } from 'utilities';
 
 function postcssRTLCSS (options: PluginOptions): Plugin {
 
-    const { rules } = options;
+    const { rulesMatchers } = options;
 
-    if (!rules || !rules.length) {
+    if (!rulesMatchers || !rulesMatchers.length) {
         throw new Error('postcss-comment requires a rules option!');
     }
 
-    const masterRegExp = getMasterRegExp(rules);
+    const masterRegExp = getMasterRegExp(rulesMatchers);
 
     return ({
         postcssPlugin: 'postcss-comments',
         Once(css: Root): void {
             css.walkRules((rule: Rule): void => {
                 if (masterRegExp.test(rule.selector)) {
-                    insertComments(rule, rules);
+                    insertComments(rule, rulesMatchers);
                 }
             });
         }

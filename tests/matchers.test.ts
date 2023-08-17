@@ -21,51 +21,51 @@ describe('Matchers', () => {
     });
 
     it('String matchers', () => {
-        const rules = [
+        const rulesMatchers = [
             {
-                ruleMatcher: '.test18::after',
+                matcher: '.test18::after',
                 prepend: 'Comment before test18::after'
             },
             {
-                ruleMatcher: '.test2',
+                matcher: '.test2',
                 append: 'Comment after .test2'
             },
             {
-                ruleMatcher: '.test46',
+                matcher: '.test46',
                 prepend: 'Comment inside media-query prepend',
                 append: 'Comment inside media-query append'
             }
         ];
-        const output = postcss([postcssComments({ rules })]).process(input);
+        const output = postcss([postcssComments({ rulesMatchers })]).process(input);
         expect(output.css).toMatchSnapshot();
         expect(output.warnings()).toHaveLength(0);
     });
 
     it('Regexp matchers', () => {
-        const rules = [
+        const rulesMatchers = [
             {
-                ruleMatcher: /^\.test\d+$/,
+                matcher: /^\.test\d+$/,
                 prepend: 'Comment before any class with .test and a number'
             },
             {
-                ruleMatcher: /^\.test\w+\d+$/,
+                matcher: /^\.test\w+\d+$/,
                 append: 'Comment after any class with .test some letters and a number'
             },
             {
-                ruleMatcher: /^\.test[\s\S]+\.test\d+$/,
+                matcher: /^\.test[\s\S]+\.test\d+$/,
                 prepend: 'Comment before multiple tests class rules',
                 append: 'Comment after multiple test class rules'
             }
         ];
-        const output = postcss([postcssComments({ rules })]).process(input);
+        const output = postcss([postcssComments({ rulesMatchers })]).process(input);
         expect(output.css).toMatchSnapshot();
         expect(output.warnings()).toHaveLength(0);
     });
 
     it('Array of matchers', () => {
-        const rules = [
+        const rulesMatchers = [
             {
-                ruleMatcher: [
+                matcher: [
                     /^\.test\d+-\w+$/,
                     '.example35',
                     /html \.test\d+$/
@@ -73,7 +73,7 @@ describe('Matchers', () => {
                 prepend: 'Comment before these matchers'
             },
             {
-                ruleMatcher: [
+                matcher: [
                     /^\.test\d+$/,
                     /^#test.+$/
                 ],
@@ -81,7 +81,7 @@ describe('Matchers', () => {
                 append: 'End of a test'
             }
         ];
-        const output = postcss([postcssComments({ rules })]).process(input);
+        const output = postcss([postcssComments({ rulesMatchers })]).process(input);
         expect(output.css).toMatchSnapshot();
         expect(output.warnings()).toHaveLength(0);
     });
@@ -92,7 +92,7 @@ describe('Matchers', () => {
             () => postcss([postcssComments()]).process(input)
         ).toThrowError();
         expect(
-            () => postcss([postcssComments({ rules: [] })]).process(input)
+            () => postcss([postcssComments({ rulesMatchers: [] })]).process(input)
         ).toThrowError();
     });
 });
