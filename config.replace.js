@@ -4,5 +4,5 @@ module.exports = {
         'esm/index.d.ts'
     ],
     from: /declare namespace[^}]*\}[^}]*\};/g,
-    to: 'export = postcssRTLCSS',
+    to: 'export = postcssComments',
 };

@@ -2,7 +2,7 @@ import { Root, Rule, Plugin } from 'postcss';
 import { PluginOptions } from '@types';
 import { getMasterRegExp, insertComments } from 'utilities';
 
-function postcssRTLCSS (options: PluginOptions): Plugin {
+function postcssComments (options: PluginOptions): Plugin {
 
     const { rulesMatchers } = options;
 
@@ -24,6 +24,6 @@ function postcssRTLCSS (options: PluginOptions): Plugin {
     });
 }
 
-postcssRTLCSS.postcss = true;
+postcssComments.postcss = true;
 
-export default postcssRTLCSS;
+export default postcssComments;
