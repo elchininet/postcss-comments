@@ -6,7 +6,9 @@ function postcssRTLCSS (options: PluginOptions): Plugin {
 
     const { comments } = options;
 
-    if (!comments?.length) throw new Error('postcss-comment requires a comments option!');
+    if (!comments || !comments.length) {
+        throw new Error('postcss-comment requires a comments option!');
+    }
 
     const masterRegExp = getMasterRegExp(comments);
 
