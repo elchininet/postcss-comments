@@ -1,9 +1,11 @@
-export interface CommentConfig {
-    matcher: string | RegExp;
+export type Matcher = string | RegExp | (string | RegExp)[];
+
+export interface RuleCommentConfig {
+    ruleMatcher: Matcher;
     prepend?: string;
     append?: string;
 }
 
 export interface PluginOptions {
-    comments: CommentConfig[];
+    rules: RuleCommentConfig[];
 }
