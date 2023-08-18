@@ -178,7 +178,7 @@ postcssComments({
 
 ### Using RegExp rule matchers
 
-Regular Expressions matchers are more flexible. They allow one to match rules without specifing exactly the string of their selectors using a Regular Expression pattern instead.
+Regular Expressions matchers are more flexible. They allow one to match rules without specifying exactly the string of their selectors using a Regular Expression pattern instead.
 
 ```javascript
 postcssComments({
