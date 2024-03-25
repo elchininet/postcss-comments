@@ -1,7 +1,10 @@
 # PostCSS Comments
 [PostCSS] plugin to prepend and append comments to CSS rules.
 
-[![Deployment Status](https://github.com/elchininet/postcss-comments/actions/workflows/deploy.yaml/badge.svg)](https://github.com/elchininet/postcss-comments/actions/workflows/deploy.yaml) &nbsp; [![Coverage Status](https://coveralls.io/repos/github/elchininet/postcss-comments/badge.svg?branch=master)](https://coveralls.io/github/elchininet/postcss-comments?branch=master) &nbsp; [![npm version](https://badge.fury.io/js/postcss-comments.svg)](https://badge.fury.io/js/postcss-comments)
+[![Deployment Status](https://github.com/elchininet/postcss-comments/actions/workflows/deploy.yaml/badge.svg)](https://github.com/elchininet/postcss-comments/actions/workflows/deploy.yaml)
+[![Tests](https://github.com/elchininet/postcss-comments/actions/workflows/test.yaml/badge.svg)](https://github.com/elchininet/postcss-comments/actions/workflows/test.yaml)
+[![Coverage Status](https://coveralls.io/repos/github/elchininet/postcss-comments/badge.svg?branch=master)](https://coveralls.io/github/elchininet/postcss-comments?branch=master)
+[![npm version](https://badge.fury.io/js/postcss-comments.svg)](https://badge.fury.io/js/postcss-comments)
 
 Description
 ---
