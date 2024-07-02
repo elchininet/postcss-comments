@@ -1,8 +1,0 @@
-module.exports = {
-    files: [
-        'index.d.ts',
-        'esm/index.d.ts'
-    ],
-    from: /declare namespace[^}]*\}[^}]*\};/g,
-    to: 'export = postcssComments',
-};
