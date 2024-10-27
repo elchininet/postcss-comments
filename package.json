@@ -46,8 +46,8 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@types/eslint": "^9.6.1",
-    "@types/jest": "^29.5.13",
-    "@types/node": "^22.7.7",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.8.1",
     "eslint": "^9.13.0",
     "eslint-plugin-jest": "^28.8.3",
     "globals": "^15.11.0",
@@ -55,11 +55,11 @@
     "postcss": "^8.4.47",
     "replace-in-file": "^8.2.0",
     "rimraf": "^6.0.1",
-    "rollup": "^4.24.0",
+    "rollup": "^4.24.1",
     "rollup-plugin-ts": "^3.4.5",
     "ts-jest": "^29.2.5",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.10.0"
+    "typescript-eslint": "^8.11.0"
   },
   "peerDependencies": {
     "postcss": "^8.0.0"
