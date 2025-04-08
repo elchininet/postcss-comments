@@ -59,7 +59,7 @@
     "rollup-plugin-ts": "^3.4.5",
     "ts-jest": "^29.3.1",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.29.0"
+    "typescript-eslint": "^8.29.1"
   },
   "peerDependencies": {
     "postcss": "^8.0.0"
