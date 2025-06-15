@@ -90,9 +90,9 @@ describe('Matchers', () => {
         expect(
             // @ts-ignore
             () => postcss([postcssComments()]).process(input)
-        ).toThrowError();
+        ).toThrow();
         expect(
             () => postcss([postcssComments({ rulesMatchers: [] })]).process(input)
-        ).toThrowError();
+        ).toThrow();
     });
 });
