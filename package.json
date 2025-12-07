@@ -53,13 +53,13 @@
     "globals": "^16.5.0",
     "jest": "^30.2.0",
     "postcss": "^8.5.6",
-    "replace-in-file": "^8.3.0",
+    "replace-in-file": "^8.4.0",
     "rimraf": "^6.1.2",
     "rollup": "^4.53.3",
     "rollup-plugin-ts": "^3.4.5",
-    "ts-jest": "^29.4.5",
+    "ts-jest": "^29.4.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.48.0"
+    "typescript-eslint": "^8.48.1"
   },
   "peerDependencies": {
     "postcss": "^8.0.0"
