@@ -11,13 +11,13 @@ const getRegExpString = (ruleMatcher: Matcher): string => {
     if (ruleMatcher instanceof RegExp) {
         return ruleMatcher.toString().replace(REGEXP_STRING, '$1');
     }
-    ruleMatcher.map((matcher: string | RegExp): string => {
+    return ruleMatcher.map((matcher: string | RegExp): string => {
         return getRegExpString(matcher);
     }).join('|');
 };
 
 const cleanCommentBefore = (comment: Comment): void => {
-    comment.raws.before = comment.raws.before.replace(/\n+/, '\n');
+    comment.raws.before = comment.raws.before!.replace(/\n+/, '\n');
 };
 
 const cleanRuleBefore = (rule: Rule): void => {
