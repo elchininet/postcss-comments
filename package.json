@@ -1,6 +1,6 @@
 {
   "name": "postcss-comments",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Postcss plugin to prepend or append comments to CSS rules",
   "repository": "git@github.com:elchininet/postcss-comments.git",
   "author": "ElChiniNet",
