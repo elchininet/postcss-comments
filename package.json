@@ -11,6 +11,7 @@
     "postcss-plugin",
     "comments"
   ],
+  "type": "module",
   "main": "index.js",
   "module": "esm/index.js",
   "types": "index.d.ts",
@@ -35,9 +36,8 @@
     "test": "jest --clearCache && jest --verbose",
     "lint": "eslint src/**/*.ts",
     "clean": "./scripts/clean.sh",
-    "set-module": "./scripts/set-module.sh",
     "modify-dts": "replace-in-file --configFile=config.replace.json",
-    "build": "pnpm clean && pnpm set-module && rollup --config rollup.config.js --bundleConfigAsCjs && pnpm modify-dts",
+    "build": "pnpm clean && rollup --config rollup.config.mjs && pnpm modify-dts",
     "prepare": "pnpm build",
     "prepublishOnly": "pnpm lint && pnpm test",
     "version": "git add .",
